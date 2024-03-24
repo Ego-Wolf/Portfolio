@@ -1,0 +1,42 @@
+body {
+  background-color: #FAFAFA;
+  padding: 20px;
+}
+
+.object {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.pathlong {
+  stroke-dasharray: 1350;
+  stroke-dashoffset: 0;
+  animation: dashout 5s linear infinite;
+}
+
+.path {
+  stroke-dasharray: 675;
+  stroke-dashoffset: 0;
+  animation: dash 5s linear infinite;
+}
+
+@keyframes dashout {
+  from {
+    stroke-dashoffset: 1350;
+  }
+  to {
+    stroke-dashoffset: -1350;
+  }
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 675;
+  }
+  to {
+    stroke-dashoffset: -675;
+  }
+}
